@@ -1,0 +1,15 @@
+#Problem 1
+
+l=eval(input())
+b=[min(l)]
+a=min(l)[-1]
+l.remove(min(l))
+for i in l:
+    for j in l:
+        if a==j[0] and j[-1]!=b[0][0]:
+            b.append(j)
+            a=j[-1]
+            l.remove(j)
+            break
+b=b+l
+print(b)
