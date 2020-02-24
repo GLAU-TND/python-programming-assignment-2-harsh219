@@ -1,0 +1,15 @@
+
+#Problem 2
+
+l=eval(input())
+l=[str(i) for i in l]
+l.sort()
+b=''
+for i in range(len(l)-1):
+    if l[i][0]==l[i+1][0] and len(l[i])<len(l[i+1]):
+        a=l[i]
+        l[i]=l[i+1]
+        l[i+1]=a
+for i in range(len(l)-1,-1,-1):
+    b=b+l[i]
+print(int(b))
